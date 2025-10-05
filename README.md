@@ -1,3 +1,5 @@
+# Algoritmos de Ordenação - 06/10
+
 ### Heapsort
 
 <p> Heapsort é um algoritmo de ordenação eficiente baseado no uso de estruturas de dados denominadas heaps (máxima/mínima). Um heap é uma estrutura de dados baseada em árvore que satisfaz a propriedade heap – ou seja, para um heap máximo, a chave de qualquer nó é menor ou igual à chave de seu pai (se tiver um pai).
@@ -68,6 +70,8 @@ Uma implementação em Java é apresentada abaixo :
 		return arr;
 	}
 	}
+	
+---
 
 ### QuickSort
 
