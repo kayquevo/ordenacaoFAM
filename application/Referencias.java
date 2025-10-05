@@ -46,5 +46,18 @@ public class Referencias {
 		
 		System.out.println("QuickSort teste: ");
 		System.out.println("Executado em = " + (tempoFinal - tempoInicial) + " ms");
-	}
+		
+		//
+		
+		System.out.println();
+		System.out.println("---------------------------------------");
+		System.out.println();
+		System.out.println("Arvore Binaria teste:");
+		System.out.println("O autor não incluiu um método main com um conjunto de testes específico para a árvore binária, focando apenas em explicar os métodos da classe.");
+		
+		
+    }
+
+    
+	
 }

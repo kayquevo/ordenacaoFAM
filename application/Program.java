@@ -2,6 +2,7 @@ package application;
 
 import java.util.Arrays;
 
+import algoritmos.ArvoreBinaria;
 import algoritmos.Heapsort;
 import algoritmos.Quicksort;
 
@@ -25,7 +26,20 @@ public class Program {
         int[] vetorParaQuicksort = Arrays.stream(vetorOriginal).mapToInt(Integer::intValue).toArray();
         quicksorter.sort(vetorParaQuicksort);
         System.out.println("Quicksort: \t" + Arrays.toString(vetorParaQuicksort));
-
+        
+        
+        // Teste com Arvore Binaria
+        System.out.println("\nInserindo na Árvore Binária:");
+        ArvoreBinaria arvore = new ArvoreBinaria();
+        for (Integer valor : vetorOriginal) {
+            arvore.inserir(valor);
+        }
+        
+        System.out.print("\nÁrvore Binária (em ordem): ");
+        arvore.emOrdem();
+        System.out.println();
+        
+        
         
     }
 }
