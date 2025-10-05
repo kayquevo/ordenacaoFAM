@@ -3,21 +3,29 @@ package application;
 import java.util.Arrays;
 
 import algoritmos.Heapsort;
+import algoritmos.Quicksort;
 
 public class Program {
 
-	public static void main(String[] args) {
-		Heapsort sorter = new Heapsort();
-		
-		Integer[] arr = {1, 4, 3, 2, 64, 3, 2, 4, 5, 5, 2, 12, 14, 5, 3, 0, -1};
-		String[] strarr = {"hope you find this helpful!", "wef", "rg", "q2rq2r", "avs", "erhijer0g", "ewofij", "gwe", "q", "random"};
-		
-		arr = sorter.heapsort(arr);
-		strarr = sorter.heapsort(strarr);
-		
-		System.out.println(Arrays.toString(arr));
-		System.out.println(Arrays.toString(strarr));
-	}
+    public static void main(String[] args) {
+        
+        Integer[] vetorOriginal = {11, 8, 4, 13, 1, 5, 20, 7};
+        
+        System.out.println("Vetor Original: " + Arrays.toString(vetorOriginal));
+        System.out.println("-------------------------------------------------");
+
+        // Teste com Heapsort
+        Heapsort heapsorter = new Heapsort();
+        Integer[] vetorParaHeapsort = Arrays.copyOf(vetorOriginal, vetorOriginal.length); 
+        heapsorter.heapsort(vetorParaHeapsort);
+        System.out.println("Heapsort: \t" + Arrays.toString(vetorParaHeapsort));
+        
+        // Teste com Quicksort
+        Quicksort quicksorter = new Quicksort();
+        int[] vetorParaQuicksort = Arrays.stream(vetorOriginal).mapToInt(Integer::intValue).toArray();
+        quicksorter.sort(vetorParaQuicksort);
+        System.out.println("Quicksort: \t" + Arrays.toString(vetorParaQuicksort));
+
+        
+    }
 }
-	
-	
