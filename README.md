@@ -162,6 +162,7 @@ Vejamos na tabela abaixo a comparação entre o tempo de execução.
 
 Veja que o tempo de processamento do QuickSort é muito bom quando tratamos do caso médio, que é exatamente o nosso caso (randômico). Veja que o tempo para 200.000 registros é muito eficiente, muito mais que os mostrados anteriormente para este tipo de caso. [2]
 
+---
 
 ### Árvores Binárias
 
