@@ -178,7 +178,97 @@ Segue na Figura 1 uma ilustração de um exemplo de árvore binária.
 
 No exemplo acima tem-se uma árvore binária onde a raiz é o elemento 8, o filho da esquerda do elemento 8 é o elemento 3, o filho da direita é o elemento número 10. Nota-se que todos elementos da árvore binária possuem no máximo dois filhos, sendo o da esquerda sempre menor e o da direita sempre maior que o elemento pai. [3]
 
-### Referencias
+---
+
+
+### Gnome Sort 
+
+(Peguei em um site gringo o algoritmo, por isso está em inglês)
+
+
+**Algorithm Steps**
+
+1. If you are at the start of the array then go to the right element (from arr[0] to arr[1]).
+2. If the current array element is larger or equal to the previous array element then go one step right
+        
+        if (arr[i] >= arr[i-1])
+        i++;
+   
+1. If the current array element is smaller than the previous array element then swap these two elements and go one step backwards
+   
+		if (arr[i] < arr[i - 1]) {
+			swap(arr[i], arr[i - 1]);
+			i--;
+		}
+
+1. Repeat steps 2) and 3) till ‘i’ reaches the end of the array (i.e- ‘n-1’)
+2. If the end of the array is reached then stop and the array is sorted.
+
+   		// Java Program to implement Gnome Sort 
+
+		import java.util.Arrays;
+
+		public class GFG {
+		static void gnomeSort(int arr[], int n) {
+		int index = 0;
+
+		while (index < n) {
+			if (index == 0)
+				index++;
+			if (arr[index] >= arr[index - 1])
+				index++;
+			else {
+				int temp = 0;
+				temp = arr[index];
+				arr[index] = arr[index - 1];
+				arr[index - 1] = temp;
+				index--;
+			}
+		}
+		return;
+		}
+
+		// Driver program to test above functions.
+		public static void main(String[] args) {
+		int arr[] = { 34, 2, 10, -9 };
+
+		gnomeSort(arr, arr.length);
+
+		System.out.print("Sorted sequence after applying Gnome sort: ");
+		System.out.println(Arrays.toString(arr));
+		}
+		}
+
+		// Code Contributed by Mohit Gupta_OMG
+
+**Output:**
+
+		Sorted sequence after applying Gnome sort: [-9, 2, 10, 34]
+
+**Time Complexity**: O(n2). As there is no nested loop (only one while) it may seem that this is a linear O(n) time algorithm. But the time complexity is O(n^2) as the variable ‘index’ in the program doesn’t always get incremented, it gets decremented too. 
+**Auxiliary Space**: O(n) [4]
+
+---
+
+### Implementação
+
+<img src="imagens/caminhos.jpg" width="300px">
+
+* Separei os algoritmos em classes.
+* Em `application`, na classe `Program.java`, contém o teste de todos os algoritmos padronizados.
+* Já em `Referencias.java`, têm os testes realizados pelos autores dos algoritmos, testes presentes nos artigos.
+
+**Console**
+
+* Program.java:
+   
+<img src="imagens/program.jpg" width="400px">
+
+* Referencias.java
+
+<img src="imagens/referencias.jpg" width="480px">
+
+### Referências
 
 <p>
 &nbsp; &nbsp; [1] Mbah R. Algoritmos de Ordenação Explicados – com Exemplos em Python, Java e C++. [publicação online]; 2020. [acesso em 05 out 2025]. Disponível em: <a href="https://www.freecodecamp.org/portuguese/news/algoritmos-de-ordenacao-explicados-com-exemplos-em-python-java-e-c/">https://www.freecodecamp.org/portuguese/news/algoritmos-de-ordenacao-explicados-com-exemplos-em-python-java-e-c/</a>
@@ -190,4 +280,8 @@ No exemplo acima tem-se uma árvore binária onde a raiz é o elemento 8, o filh
 
 <p>
 &nbsp; &nbsp; [3] DevMedia. Trabalhando com árvores binárias em Java. [publicação online]; [acesso em 05 out 2025]. Disponível em: <a href="https://www.devmedia.com.br/trabalhando-com-arvores-binarias-em-java/25749">https://www.devmedia.com.br/trabalhando-com-arvores-binarias-em-java/25749</a>
+</p>
+
+<p>
+&nbsp; &nbsp; [4] GeeksforGeeks. Java Program for Gnome Sort. [publicação online]; 2025. [acesso em 05 out 2025]. Disponível em: <a href="https://www.geeksforgeeks.org/dsa/java-program-for-gnome-sort/">https://www.geeksforgeeks.org/dsa/java-program-for-gnome-sort/</a>
 </p>
