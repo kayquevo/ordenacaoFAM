@@ -3,6 +3,7 @@ package application;
 import java.util.Arrays;
 
 import algoritmos.ArvoreBinaria;
+import algoritmos.GnomeSort;
 import algoritmos.Heapsort;
 import algoritmos.Quicksort;
 
@@ -21,11 +22,18 @@ public class Program {
         heapsorter.heapsort(vetorParaHeapsort);
         System.out.println("Heapsort: \t" + Arrays.toString(vetorParaHeapsort));
         
+        
         // Teste com Quicksort
         Quicksort quicksorter = new Quicksort();
         int[] vetorParaQuicksort = Arrays.stream(vetorOriginal).mapToInt(Integer::intValue).toArray();
         quicksorter.sort(vetorParaQuicksort);
         System.out.println("Quicksort: \t" + Arrays.toString(vetorParaQuicksort));
+        
+        
+        // Teste com GnomeSort 
+        int[] vetorParaGnomeSort = Arrays.stream(vetorOriginal).mapToInt(Integer::intValue).toArray();
+        GnomeSort.gnomeSort(vetorParaGnomeSort, vetorParaGnomeSort.length);
+        System.out.println("GnomeSort: \t" + Arrays.toString(vetorParaGnomeSort));
         
         
         // Teste com Arvore Binaria
@@ -38,8 +46,6 @@ public class Program {
         System.out.print("\nÁrvore Binária (em ordem): ");
         arvore.emOrdem();
         System.out.println();
-        
-        
         
     }
 }
