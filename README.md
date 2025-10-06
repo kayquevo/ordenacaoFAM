@@ -162,7 +162,22 @@ Vejamos na tabela abaixo a comparação entre o tempo de execução.
 
 Veja que o tempo de processamento do QuickSort é muito bom quando tratamos do caso médio, que é exatamente o nosso caso (randômico). Veja que o tempo para 200.000 registros é muito eficiente, muito mais que os mostrados anteriormente para este tipo de caso. [2]
 
-	
+---
+
+### Árvores Binárias
+
+As árvores são estruturas de dados baseadas em listas encadeadas que possuem um nó superior também chamado de raiz que aponta para outros nós, chamados de nós filhos, que podem ser pais de outros nós.
+Uma árvore de busca binária tem as seguintes propriedades:
+
+* todos os elementos na subárvore esquerda de um determinado nó n são menores que n;
+* todos os elementos na subárvore direita de um determinado nó n são maiores ou iguais a n.
+
+Segue na Figura 1 uma ilustração de um exemplo de árvore binária.
+
+<img src="imagens/arvoreBinaria.jpg" width="300px">
+
+No exemplo acima tem-se uma árvore binária onde a raiz é o elemento 8, o filho da esquerda do elemento 8 é o elemento 3, o filho da direita é o elemento número 10. Nota-se que todos elementos da árvore binária possuem no máximo dois filhos, sendo o da esquerda sempre menor e o da direita sempre maior que o elemento pai. [3]
+
 ### Referencias
 
 <p>
@@ -171,4 +186,8 @@ Veja que o tempo de processamento do QuickSort é muito bom quando tratamos do c
 
 <p>
 &nbsp; &nbsp; [2] DevMedia. Algoritmos de Ordenação em Java. [publicação online]; [acesso em 05 out 2025]. Disponível em: <a href="https://www.devmedia.com.br/algoritmos-de-ordenacao-em-java/32693">https://www.devmedia.com.br/algoritmos-de-ordenacao-em-java/32693</a>
+</p>
+
+<p>
+&nbsp; &nbsp; [3] DevMedia. Trabalhando com árvores binárias em Java. [publicação online]; [acesso em 05 out 2025]. Disponível em: <a href="https://www.devmedia.com.br/trabalhando-com-arvores-binarias-em-java/25749">https://www.devmedia.com.br/trabalhando-com-arvores-binarias-em-java/25749</a>
 </p>
