@@ -268,6 +268,15 @@ No exemplo acima tem-se uma árvore binária onde a raiz é o elemento 8, o filh
 
 <img src="imagens/referencias.jpg" width="480px">
 
+### Tabela de Desempenho (Tempo em milissegundos)
+
+| N de Valores | Heapsort | Quicksort | GnomeSort | Árvore Binária |
+|:------------:|:--------:|:---------:|:---------:|:--------------:|
+|      32      | 0.2984   | 0.017399  | 0.0209    | 1.706999       |
+|      64      | 0.5504   | 0.0282    | 0.1257    | 5.0914         |
+|     256      | 2.367    | 0.080799  | 1.2242    | 10.245099      |
+|     800      | 3.2191   | 0.569     | 4.2198    | 30.965201      |
+
 ### Referências
 
 <p>
